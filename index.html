@@ -169,12 +169,12 @@ input:focus,textarea:focus,select:focus{border-color:var(--kumkum);outline:none}
     <div class="step">
       <h2><span class="n">3</span>Photo and names</h2>
       <div class="photo">
-        <div class="avatar" id="avatar">K</div>
+        <div class="avatar" id="avatar">V</div>
         <span class="btn filebtn">Choose photo<input type="file" id="photoIn" accept="image/*" aria-label="Choose photo"></span>
         <button class="btn" type="button" id="photoClear" hidden>Remove</button>
       </div>
       <div class="row">
-        <div class="field"><label for="nameIn">Name on the video</label><input type="text" id="nameIn" maxlength="40" placeholder="Kavya / காவ்யா"></div>
+        <div class="field"><label for="nameIn">Name on the video</label><input type="text" id="nameIn" maxlength="40" placeholder="Vetri / வெற்றி"></div>
         <div class="field"><label for="fromIn">From (optional)</label><input type="text" id="fromIn" maxlength="40" placeholder="Amma &amp; Appa"></div>
       </div>
     </div>
@@ -627,8 +627,8 @@ function render(c,t,d){
 }
 
 /* ---------- state ---------- */
-const state={occasion:'birthday',tpl:LIB[0].id,titleLang:'both',name:'Kavya',from:'Amma & Appa',wish:OCC.birthday.s.both,wishKey:'both',music:'bday',img:null,audioBuf:null,audioStart:0,filter:'All',q:''};
-try{const s=JSON.parse(localStorage.getItem('vaazhthu2')||'null');if(s)['occasion','tpl','titleLang','name','from','wish','wishKey','music','filter'].forEach(k=>{if(s[k]!=null)state[k]=s[k]})}catch(e){}
+const state={occasion:'birthday',tpl:LIB[0].id,titleLang:'both',name:'Vetri',from:'Amma & Appa',wish:OCC.birthday.s.both,wishKey:'both',music:'bday',img:null,audioBuf:null,audioStart:0,filter:'All',q:''};
+try{const s=JSON.parse(localStorage.getItem('vaazhthu2')||'null');if(s)['occasion','tpl','titleLang','name','from','wish','wishKey','music','filter'].forEach(k=>{if(s[k]!=null)state[k]=s[k]});if(state.name==='Kavya')state.name='Vetri'}catch(e){}
 if(!BY[state.tpl])state.tpl=LIB[0].id;if(!OCC[state.occasion])state.occasion='birthday';if(state.music==='own')state.music='bday';
 function save(){try{const {img,audioBuf,...rest}=state;localStorage.setItem('vaazhthu2',JSON.stringify(rest))}catch(e){}}
 const $=id=>document.getElementById(id);
