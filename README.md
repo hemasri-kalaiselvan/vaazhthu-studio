@@ -10,7 +10,7 @@
 
 Vaazhthu Studio (வாழ்த்து வீடியோ) makes 15-second Tamil wish videos for birthdays, wedding anniversaries and Indian festivals, right in your phone's browser.
 
-Enter a name, add a photo, type a wish in Tamil, English or both, and pick one of **114 animated templates**. The app records a WhatsApp-status-size video (720×1280, 9:16) with music, ready to download or share.
+Enter a name, add a photo, type a wish in Tamil, English or both, and pick one of **124 animated templates**. The app records a WhatsApp-status-size video (720×1280, 9:16) with music, ready to download or share.
 
 There is no server, no sign-up and no paid service. The whole app is one `index.html` file.
 
@@ -18,7 +18,7 @@ There is no server, no sign-up and no paid service. The whole app is one `index.
 
 ## Features
 
-- **114 templates** across seven groups:
+- **124 templates** across eight groups, in nine different looks:
 
   | Group | Count | Examples |
   |---|---|---|
@@ -29,6 +29,7 @@ There is no server, no sign-up and no paid service. The whole app is one `index.
   | Nature | 10 | Evergreen Hills, Misty Mountains, Coconut Coast, Snowy Pines |
   | Festivals | 34 | Pongal Paanai, Deepavali Crackers, Golu Steps, Crescent Moon, Pookalam |
   | Full photo (head to toe) | 14 | Royal Portrait, Temple Arch Portrait, Wedding Arch Portrait, Neon Portrait, Deepavali Family Portrait |
+  | Party specials | 10 | Candle Letter Cake, Rose Balloon Sky, Golden Light Heart, Royal Crest, Marquee Night, Heart Rain |
 
 - **18 occasions**, each with its own Tamil and English title and ready-made wishes: Birthday, Wedding anniversary, Pongal, Deepavali, Karthigai Deepam, Tamil New Year, New Year, Vinayagar Chathurthi, Navaratri, Ayudha Pooja, Krishna Jayanthi, Christmas, Ramzan / Eid, Onam, Holi, Raksha Bandhan, Independence Day and Republic Day.
 - **Animated effects:**
@@ -47,6 +48,11 @@ There is no server, no sign-up and no paid service. The whole app is one `index.
 - **Photo frames:** circle, temple arch, heart, hexagon, polaroid, tall portrait and tall temple arch.
 - **Photo shape for any template:** Template, Full photo (head to toe), Circle or Square. **Fit whole photo** zooms out so nothing is cut off, filling the sides with a soft blur.
 - **Rich effects:** a gold sparkle burst when the photo appears, a glossy shine across the frame, ornate gold frames, corner flowers and moving light flares.
+- **Nine looks** so templates don't look alike: Classic, Full-screen photo, Ribbon banner, Big name poster, Temple doors (opening wooden doors), Stage curtains, Film strip, Neon sign and Full photo. Filter by look with the **Look** menu.
+- **Changing backgrounds:** an option that cross-fades three matching scenes behind the same photo and text.
+- **Caption-style wishes:** an option that shows the wish two lines at a time in bold, colourful outlined text, like song lyrics.
+- **Party effects:** a glowing heart of light, a light ring with sparkles, a ring of stars, rainbow candle letters, a hot-air balloon made of roses with a scroll banner, a royal crown-and-wings crest, a light-bulb marquee sign, neon light streaks and big petals falling in the foreground.
+- **Cinematic effects (on by default, can be switched off):** fade-in from dark, slow camera zoom, rotating light rays behind the photo, two lights orbiting the frame, a flash when the photo appears, a 3D glitter name and a golden sparkle shower at the end.
 - **Clean music:** each tune is prepared once in the background and played as a single audio track, so it doesn't crackle while the animation runs.
 - **Five Tamil font styles:** Arima, Catamaran, Baloo Thambi 2, Coiny and Kavivanar (all from Google Fonts).
 - **Title language:** Tamil, English or both.
