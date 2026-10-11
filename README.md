@@ -10,7 +10,7 @@
 
 Vaazhthu Studio (வாழ்த்து வீடியோ) makes 15-second Tamil wish videos for birthdays, wedding anniversaries and Indian festivals, right in your phone's browser.
 
-Enter a name, add a photo, type a wish in Tamil, English or both, and pick one of **100 animated templates**. The app records a WhatsApp-status-size video (720×1280, 9:16) with music, ready to download or share.
+Enter a name, add a photo, type a wish in Tamil, English or both, and pick one of **114 animated templates**. The app records a WhatsApp-status-size video (720×1280, 9:16) with music, ready to download or share.
 
 There is no server, no sign-up and no paid service. The whole app is one `index.html` file.
 
@@ -18,7 +18,7 @@ There is no server, no sign-up and no paid service. The whole app is one `index.
 
 ## Features
 
-- **100 templates** across six groups:
+- **114 templates** across seven groups:
 
   | Group | Count | Examples |
   |---|---|---|
@@ -28,6 +28,7 @@ There is no server, no sign-up and no paid service. The whole app is one `index.
   | Anniversary (traditional) | 8 | Jasmine Arch, Wedding Gold, Rose Petal Shower, Lotus Love |
   | Nature | 10 | Evergreen Hills, Misty Mountains, Coconut Coast, Snowy Pines |
   | Festivals | 34 | Pongal Paanai, Deepavali Crackers, Golu Steps, Crescent Moon, Pookalam |
+  | Full photo (head to toe) | 14 | Royal Portrait, Temple Arch Portrait, Wedding Arch Portrait, Neon Portrait, Deepavali Family Portrait |
 
 - **18 occasions**, each with its own Tamil and English title and ready-made wishes: Birthday, Wedding anniversary, Pongal, Deepavali, Karthigai Deepam, Tamil New Year, New Year, Vinayagar Chathurthi, Navaratri, Ayudha Pooja, Krishna Jayanthi, Christmas, Ramzan / Eid, Onam, Holi, Raksha Bandhan, Independence Day and Republic Day.
 - **Animated effects:**
@@ -43,7 +44,10 @@ There is no server, no sign-up and no paid service. The whole app is one `index.
 - **Photo adjust:** drag the photo in the preview to position the face, pinch or use the slider to zoom, or use the arrow buttons.
 - **Age badge:** enter an age or number of years (for example 60) to get a gold "60" medallion and titles like "இனிய 60ஆம் பிறந்தநாள்" and "Happy 60th Birthday".
 - **Animated title:** each word pops in, then a shine sweeps across, with glowing sparkles and a decorative underline.
-- **Photo frames:** circle, temple arch, heart, hexagon and polaroid.
+- **Photo frames:** circle, temple arch, heart, hexagon, polaroid, tall portrait and tall temple arch.
+- **Photo shape for any template:** Template, Full photo (head to toe), Circle or Square. **Fit whole photo** zooms out so nothing is cut off, filling the sides with a soft blur.
+- **Rich effects:** a gold sparkle burst when the photo appears, a glossy shine across the frame, ornate gold frames, corner flowers and moving light flares.
+- **Clean music:** each tune is prepared once in the background and played as a single audio track, so it doesn't crackle while the animation runs.
 - **Five Tamil font styles:** Arima, Catamaran, Baloo Thambi 2, Coiny and Kavivanar (all from Google Fonts).
 - **Title language:** Tamil, English or both.
 - **19 built-in tunes**, each with a **▶ Listen** button so you can hear it before choosing:
