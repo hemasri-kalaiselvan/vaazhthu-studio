@@ -39,16 +39,25 @@ There is no server, no sign-up and no paid service. The whole app is one `index.
   - walking elephants, deer and rabbits, plus butterflies, birds and fish
   - diyas, lanterns, kolam and rangoli, zari borders and mango-leaf thoranam
   - a boiling Pongal pot, sugarcane, golu steps, modak, a snake boat and Christmas trees
+- **Long wishes and poems:** up to 800 characters with line breaks kept. A long wish opens in its own card after the intro, line by line, and the video grows from 15 seconds up to 40 seconds so every line can be read.
+- **Photo adjust:** drag the photo in the preview to position the face, pinch or use the slider to zoom, or use the arrow buttons.
+- **Age badge:** enter an age or number of years (for example 60) to get a gold "60" medallion and titles like "இனிய 60ஆம் பிறந்தநாள்" and "Happy 60th Birthday".
+- **Animated title:** each word pops in, then a shine sweeps across, with glowing sparkles and a decorative underline.
 - **Photo frames:** circle, temple arch, heart, hexagon and polaroid.
 - **Five Tamil font styles:** Arima, Catamaran, Baloo Thambi 2, Coiny and Kavivanar (all from Google Fonts).
 - **Title language:** Tamil, English or both.
-- **Music:**
-  - Birthday bells, a Happy Birthday tune (public-domain melody)
-  - Mangala arpeggio, a gentle original tune
-  - Nadaswaram melam, a festive reed tune with thavil drums
-  - Modern pop beat
-  - Your own audio file, with a "start from" time
-  - No music
+- **19 built-in tunes**, each with a **▶ Listen** button so you can hear it before choosing:
+
+  | Group | Tunes |
+  |---|---|
+  | Birthday | Birthday bells, Piano birthday waltz, Happy ukulele, Celebration fanfare |
+  | Tamil and Indian | Nadaswaram melam, Veena Mohanam, Bansuri flute, Temple morning, Parai kuthu, Sitar festive |
+  | Love and soft | Mangala arpeggio, Strings of love, Harp dream, Lo-fi chill |
+  | Kids | Twinkle music box |
+  | Modern | Modern pop beat, Party EDM |
+  | Festival songs | Jingle Bells, Auld Lang Syne |
+
+  You can also use your own audio file, with an optional start and end time (for example 0:45 to 1:05), or no music. If the chosen part is shorter than the video, it repeats. Each template picks a fitting tune by default, such as parai for Pongal, sitar for Deepavali and Jingle Bells for Christmas.
 - **Search and filter:** category chips plus a search box, so typing "pongal", "neon" or "balloons" finds matching templates.
 - **Remembers your inputs** in the browser, so the name, wish and chosen template are still there next time.
 
@@ -59,11 +68,11 @@ There is no server, no sign-up and no paid service. The whole app is one `index.
 1. Open the app in **Chrome** on your phone or computer.
 2. **Template:** tap a category chip or search, then pick a design.
 3. **Occasion:** this is set automatically by the template, and you can change it from the dropdown. Choose the title language.
-4. **Photo and names:** choose a photo, then type the name and an optional "From" line.
+4. **Photo and names:** choose a photo and drag it in the preview to position the face, then tap **Done**. Type the name, an optional "From" line and an optional age.
 5. **Wish message:** type your own wish, or tap a ready-made one (தமிழ், English or Both).
-6. **Music:** pick a built-in tune, your own audio file or no music.
+6. **Music:** tap **▶ Listen** on any tune to hear it first, then select the one you like. You can also use your own audio file or no music.
 7. Tap **Play with music** to preview.
-8. Tap **Create video**. Keep the screen on and the app open for about 15 seconds while it records.
+8. Tap **Create video**. Keep the screen on and the app open while it records (15 seconds, or longer for a long wish).
 9. Tap **Download video** or **Share** to send it on WhatsApp.
 
 ---
@@ -126,7 +135,7 @@ T('Template Name', 'Category', 'occasion',
 
 ## Music and copyright
 
-The built-in tunes are original compositions or public-domain melodies, so videos made with them are safe to share.
+The built-in tunes are generated live in the browser. They are original compositions or public-domain melodies (Happy Birthday, Twinkle Twinkle Little Star, Jingle Bells and Auld Lang Syne), so videos made with them are safe to share.
 
 Film songs and other commercial music are copyrighted. The app does not include any. If you add a song with **My own audio**, use it only for personal sharing, or use music you have the rights to.
 
