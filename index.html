@@ -366,7 +366,7 @@ const LAYOUTS={
  bigname:{titleY:862,titleFs:44,cx:360,cy:560,r:176,nameY:250,nameFs:140,wishY:1036,wishMax:96,fromY:1200},
  balloon:{titleY:150,titleFs:50,cx:360,cy:470,r:172,nameY:938,nameFs:92,wishY:1004,wishMax:110,fromY:1196},
  crest:{titleY:178,titleFs:46,cx:360,cy:640,r:158,nameY:968,nameFs:92,wishY:1034,wishMax:100,fromY:1200},
- dance:{titleY:170,titleFs:54,cx:360,cy:430,r:100,feet:872,nameY:985,nameFs:92,wishY:1048,wishMax:90,fromY:1204},
+ dance:{titleY:170,titleFs:54,cx:360,cy:470,r:100,feet:912,nameY:1006,nameFs:90,wishY:1066,wishMax:80,fromY:1212},
  top:{titleY:770,titleFs:46,cx:360,cy:385,r:270,h:285,nameY:968,nameFs:80,wishY:1030,wishMax:110,fromY:1205}
 };
 
@@ -586,6 +586,7 @@ fx('candleLetters','top',(c,t,o,T,d)=>{{const pp=eOut(prog(t,.4,.6));if(pp){cons
 fx('roseBalloon','frame',(c,t,o,T,d)=>{const L=T.L,p=eOut(prog(t,1.7,1.2));if(!p)return;const {cx,cy,r}=L,bob=Math.sin(t*1.2)*6,cols=o.c||['#ff8fab','#ff4d6d','#ffc2d1','#c9184a'];c.save();c.translate(0,bob);
   c.strokeStyle='#8a5a12';c.lineWidth=2;[-.7,-.25,.25,.7].forEach(f=>{c.beginPath();c.moveTo(cx+f*r,cy+Math.sqrt(1-f*f)*r);c.lineTo(cx+f*42,cy+r+92);c.stroke()});
   const bg=c.createLinearGradient(0,cy+r+92,0,cy+r+150);bg.addColorStop(0,'#c98a3e');bg.addColorStop(1,'#7a4a1a');c.fillStyle=bg;c.beginPath();c.moveTo(cx-56,cy+r+92);c.lineTo(cx+56,cy+r+92);c.lineTo(cx+44,cy+r+148);c.lineTo(cx-44,cy+r+148);c.closePath();c.fill();c.strokeStyle='rgba(60,30,10,.5)';for(let k=1;k<5;k++){c.beginPath();c.moveTo(cx-56+k*2,cy+r+92+k*11);c.lineTo(cx+56-k*2,cy+r+92+k*11);c.stroke()}
+  if(o.fill){const g=c.createRadialGradient(cx-r*.3,cy-r*.3,r*.1,cx,cy,r*1.1);g.addColorStop(0,'#fff0f5');g.addColorStop(1,'#ff8fab');c.fillStyle=g;c.beginPath();c.arc(cx,cy,r+6,0,TAU);c.fill()}
   const n=Math.floor(46*p);for(let i=0;i<n;i++){const a=i/46*TAU-Math.PI/2,R=r+20+(i%2)*10;flower(c,cx+Math.cos(a)*R,cy+Math.sin(a)*R,20+(i%3)*4,1,cols[i%cols.length],'#fff0a8',8)}
   const bw=r*1.9*p,by=cy+r*.62;if(p>.5){c.globalAlpha=clamp((p-.5)*2);const sg=c.createLinearGradient(0,by-30,0,by+30);sg.addColorStop(0,'#fffaf0');sg.addColorStop(1,'#e8d8b8');c.fillStyle='#d8c39a';[-1,1].forEach(s=>{c.beginPath();c.ellipse(cx+s*bw/2,by,16,30,0,0,TAU);c.fill()});c.fillStyle=sg;c.fillRect(cx-bw/2,by-28,bw,56);c.strokeStyle='#b8860b';c.lineWidth=2;c.strokeRect(cx-bw/2+6,by-22,bw-12,44);
     c.fillStyle='#8a1538';c.textAlign='center';c.font=`400 34px "Kavivanar","Catamaran",serif`;fitFont(c,OCC[d.occasion].en,400,34,'"Kavivanar","Catamaran",serif',bw-40,18);c.fillText(OCC[d.occasion].en,cx,by+12)}
@@ -610,14 +611,15 @@ function poseOf(move,b){const s2=Math.sin(2*Math.PI*b),s1=Math.sin(Math.PI*b),ab
   if(move==='wave'){P.L=[2.5+.25*s2,2.9+.35*Math.sin(2*Math.PI*b+1)];P.R=[2.5-.25*s2,2.9-.35*Math.sin(2*Math.PI*b+1)];P.sway=s1*12;P.lean=s1*.05;P.LL=[.1+.08*s2,.06];P.RL=[.1-.08*s2,.06]}
   else if(move==='disco'){const e=sstep(clamp(fr*2.2)),up=odd?1-e:e;P.R=[.9+1.55*up,.8+1.75*up];P.L=[.75,-.95];P.sway=Math.sin(Math.PI*b)*18;P.RL=[.12+.22*up,.05];P.LL=[.06,.02];P.lean=-.06*up;P.tilt=-.08*up}
   else if(move==='twist'){P.L=[.85+.45*s2,-.7+.45*s2];P.R=[.85-.45*s2,-.7-.45*s2];P.lean=.12*s2;P.bounce=8-Math.abs(s2)*10;P.LL=[.28,-.18];P.RL=[.28,-.18];P.sway=s2*10}
-  else if(move==='jump'){const air=Math.sin(Math.PI*fr);P.bounce=-air*52+(1-air)*6;P.L=[.35+air*2.25,.45+air*2.3];P.R=[.35+air*2.25,.45+air*2.3];P.LL=[.12+air*.28,.12-air*.45];P.RL=[.12+air*.28,.12-air*.45];P.tilt=0}
+  else if(move==='jump'){const air=Math.sin(Math.PI*fr);P.bounce=-air*34+(1-air)*5;P.L=[.35+air*2.25,.45+air*2.3];P.R=[.35+air*2.25,.45+air*2.3];P.LL=[.12+air*.28,.12-air*.45];P.RL=[.12+air*.28,.12-air*.45];P.tilt=0}
   else if(move==='kuthu'){const e=sstep(clamp(fr*2.5)),k=odd?e:1-e,up=[2.75,3.7],dn=[.55,.25];P.L=[up[0]*k+dn[0]*(1-k),up[1]*k+dn[1]*(1-k)];P.R=[up[0]*(1-k)+dn[0]*k,up[1]*(1-k)+dn[1]*k];P.LL=[.05+.6*(1-k),.05+.1*(1-k)];P.RL=[.05+.6*k,.05+.1*k];P.sway=(k*2-1)*14;P.lean=(1-k*2)*.08;P.bounce=-ab*16}
   else if(move==='bhangra'){const k=odd;P.L=[2.3+.15*Math.sin(4*Math.PI*b),3.1];P.R=[2.3-.15*Math.sin(4*Math.PI*b),3.1];P.bounce=-Math.abs(s2)*12;P.LL=k?[.7,-.35]:[.05,.03];P.RL=k?[.05,.03]:[.7,-.35];P.sway=k?-8:8}
-  else if(move==='hero'){const air=Math.max(0,Math.sin(Math.PI*(b%4)/2)-.6)*2.5;P.R=[2.95,3.0];P.L=[.75,-.95];P.LL=[.3,.25];P.RL=[.3,.25];P.bounce=-air*30-ab*4;P.tilt=.04*s1}
+  else if(move==='hero'){const air=Math.max(0,Math.sin(Math.PI*(b%4)/2)-.6)*1.6;P.R=[2.95,3.0];P.L=[.75,-.95];P.LL=[.3,.25];P.RL=[.3,.25];P.bounce=-air*30-ab*4;P.tilt=.04*s1}
   return P}
 function blendPose(a,b2,k){const o={};for(const key in a){const v=a[key];o[key]=Array.isArray(v)?v.map((x,i)=>x+(b2[key][i]-x)*k):v+(b2[key]-v)*k}return o}
 function danceFrame(T,t){const moves=T.moves||['wave','disco','twist','jump','kuthu'],b=Math.max(0,t-1.4)*2,m=Math.floor(b/4),fr=b/4-m,cur=poseOf(moves[m%moves.length],b);if(fr>.88){const nx=poseOf(moves[(m+1)%moves.length],b);return blendPose(cur,nx,sstep((fr-.88)/.12))}return cur}
 function limb(c,x,y,a,len,side,w,col){const ex=x+side*Math.sin(a)*len,ey=y+Math.cos(a)*len;c.strokeStyle=col;c.lineWidth=w;c.beginPath();c.moveTo(x,y);c.lineTo(ex,ey);c.stroke();return[ex,ey]}
+const faceC=document.createElement('canvas');faceC.width=faceC.height=300;const faceX=faceC.getContext('2d');
 function drawDancer(c,t,d,T,s){
   const L=T.L,O=OUTFITS[T.outfit]||OUTFITS.party,D=DANCE_DIMS,K=1.4,r=L.r/K,skin=d.skin||SKINS[2],P=(adjusting&&c===cx0)?poseOf('none',0):danceFrame(T,t);
   const feetY=0,hipBase=-(D.th+D.sh+8),hx=P.sway,hy=hipBase+P.bounce,up=[Math.sin(P.lean),-Math.cos(P.lean)],pp=[Math.cos(P.lean),Math.sin(P.lean)];
@@ -653,19 +655,22 @@ function drawDancer(c,t,d,T,s){
   /* arms */
   [[SL,-1,P.L],[SR,1,P.R]].forEach(([sp,side,a])=>{const e=limb(c,sp[0],sp[1],a[0],D.ua,side,24,O.shirt);const h=limb(c,e[0],e[1],a[1],D.la,side,O.sleeve==='long'?22:18,O.sleeve==='long'?O.shirt:skin);if(O.sleeve==='short'){c.strokeStyle=O.trim;c.lineWidth=4;c.beginPath();c.arc(e[0],e[1],11,0,TAU);c.stroke()}c.fillStyle=skin;c.beginPath();c.arc(h[0],h[1],12,0,TAU);c.fill()});
   /* neck */
-  c.strokeStyle=skin;c.lineWidth=26;c.beginPath();c.moveTo(sx,sy);c.lineTo(N[0],N[1]);c.stroke();
+  {const n2=at(D.torso+D.neck-6,0);c.lineCap='butt';c.strokeStyle=skin;c.lineWidth=20;c.beginPath();c.moveTo(sx,sy+4);c.lineTo(n2[0],n2[1]);c.stroke();c.lineCap='round'}
   /* jasmine behind head */
-  if(O.jasmine){for(let i=0;i<9;i++){const a=Math.PI*.15+i/8*Math.PI*.7;jasmine(c,HC[0]+Math.cos(a)*(r+4),HC[1]+Math.sin(a)*(r+4)-r*.2,.8,a)}}
+  if(O.jasmine){for(let i=0;i<9;i++){const a=Math.PI*.15+i/8*Math.PI*.7;jasmine(c,HC[0]+Math.cos(a)*(r*.86+2),HC[1]+Math.sin(a)*(r+2)-r*.2,.8,a)}}
   /* head with the face from the photo */
   c.save();c.translate(HC[0],HC[1]);c.rotate(P.tilt);
-  c.fillStyle='rgba(0,0,0,.25)';c.beginPath();c.arc(3,5,r+6,0,TAU);c.fill();
-  c.fillStyle='#ffffff';c.beginPath();c.arc(0,0,r+6,0,TAU);c.fill();
-  c.save();c.beginPath();c.arc(0,0,r,0,TAU);c.clip();
-  if(d.img){const z=d.pz||1,ir=d.img.width/d.img.height;let dw,dh;if(ir>1){dh=2*r*z;dw=dh*ir}else{dw=2*r*z;dh=dw/ir}const mx=Math.abs(dw-2*r)/2,my=Math.abs(dh-2*r)/2,ox=clamp((d.ox||0)*r,-mx,mx),oy=clamp((d.oy||0)*r,-my,my);if(isMain)photoLim={mx:mx/r,my:my/r};c.drawImage(d.img,-dw/2+ox,-dh/2+oy,dw,dh)}
-  else{c.fillStyle=skin;c.fillRect(-r,-r,2*r,2*r);c.fillStyle='#2b2d42';c.beginPath();c.ellipse(0,-r*.55,r*1.05,r*.6,0,Math.PI,TAU);c.fill();c.fillStyle='#1b1b1b';[-1,1].forEach(k=>{c.beginPath();c.arc(k*r*.32,-r*.05,r*.09,0,TAU);c.fill()});c.strokeStyle='#7a1f1f';c.lineWidth=5;c.beginPath();c.arc(0,r*.18,r*.32,.2,Math.PI-.2);c.stroke();c.fillStyle='rgba(255,120,120,.35)';[-1,1].forEach(k=>{c.beginPath();c.arc(k*r*.55,r*.2,r*.13,0,TAU);c.fill()})}
+  c.save();
+  if(d.img){/* face from the photo, soft oval edge so it blends into the cartoon */
+    const S=faceC.width/2,q=S/r;faceX.setTransform(1,0,0,1,0,0);faceX.globalCompositeOperation='source-over';faceX.clearRect(0,0,2*S,2*S);
+    const z=d.pz||1,ir=d.img.width/d.img.height;let dw,dh;if(ir>1){dh=2*r*z;dw=dh*ir}else{dw=2*r*z;dh=dw/ir}const mx=Math.abs(dw-2*r)/2,my=Math.abs(dh-2*r)/2,ox=clamp((d.ox||0)*r,-mx,mx),oy=clamp((d.oy||0)*r,-my,my);if(isMain)photoLim={mx:mx/r,my:my/r};
+    faceX.drawImage(d.img,S+(-dw/2+ox)*q,S+(-dh/2+oy)*q,dw*q,dh*q);
+    faceX.globalCompositeOperation='destination-in';faceX.save();faceX.translate(S,S);faceX.scale(.86,1);const g=faceX.createRadialGradient(0,0,S*.72,0,0,S);g.addColorStop(0,'rgba(0,0,0,1)');g.addColorStop(1,'rgba(0,0,0,0)');faceX.fillStyle=g;faceX.fillRect(-S/.86,-S,2*S/.86,2*S);faceX.restore();
+    c.drawImage(faceC,-r,-r,2*r,2*r)}
+  else{c.beginPath();c.ellipse(0,0,r*.86,r,0,0,TAU);c.clip();c.fillStyle=skin;c.fillRect(-r,-r,2*r,2*r);c.fillStyle='#2b2d42';c.beginPath();c.ellipse(0,-r*.55,r*1.05,r*.6,0,Math.PI,TAU);c.fill();c.fillStyle='#1b1b1b';[-1,1].forEach(k=>{c.beginPath();c.arc(k*r*.32,-r*.05,r*.09,0,TAU);c.fill()});c.strokeStyle='#7a1f1f';c.lineWidth=5;c.beginPath();c.arc(0,r*.18,r*.32,.2,Math.PI-.2);c.stroke();c.fillStyle='rgba(255,120,120,.35)';[-1,1].forEach(k=>{c.beginPath();c.arc(k*r*.55,r*.2,r*.13,0,TAU);c.fill()})}
   c.restore();
-  if(adjusting&&isMain){c.setLineDash([12,9]);c.lineDashOffset=-performance.now()/40;c.strokeStyle='#b3122e';c.lineWidth=4;c.beginPath();c.arc(0,0,r+14,0,TAU);c.stroke();c.setLineDash([])}
-  if(O.hat==='party'){c.save();c.translate(r*.25,-r*.82);c.rotate(.28);const g=c.createLinearGradient(-36,0,36,0);g.addColorStop(0,'#ff70a6');g.addColorStop(1,'#9b5de5');c.fillStyle=g;c.beginPath();c.moveTo(-34,0);c.lineTo(0,-92);c.lineTo(34,0);c.closePath();c.fill();c.strokeStyle='#ffd166';c.lineWidth=5;[-.3,-.6].forEach(f=>{c.beginPath();c.moveTo(-34*(1+f),92*f);c.lineTo(34*(1+f),92*f);c.stroke()});c.fillStyle='#ffd166';c.beginPath();c.arc(0,-94,11,0,TAU);c.fill();c.restore()}
+  if(adjusting&&isMain){c.setLineDash([12,9]);c.lineDashOffset=-performance.now()/40;c.strokeStyle='#b3122e';c.lineWidth=4;c.beginPath();c.ellipse(0,0,r*.86+12,r+12,0,0,TAU);c.stroke();c.setLineDash([])}
+  if(O.hat==='party'){c.save();c.translate(r*.3,-r*.8);c.rotate(.42);c.scale(.72,.72);const g=c.createLinearGradient(-36,0,36,0);g.addColorStop(0,'#ff70a6');g.addColorStop(1,'#9b5de5');c.fillStyle=g;c.beginPath();c.moveTo(-34,0);c.lineTo(0,-92);c.lineTo(34,0);c.closePath();c.fill();c.strokeStyle='#ffd166';c.lineWidth=5;[-.3,-.6].forEach(f=>{c.beginPath();c.moveTo(-34*(1+f),92*f);c.lineTo(34*(1+f),92*f);c.stroke()});c.fillStyle='#ffd166';c.beginPath();c.arc(0,-94,11,0,TAU);c.fill();c.restore()}
   c.restore();
   c.restore();
 }
@@ -865,9 +870,15 @@ let cx0=null,photoLim={mx:0,my:0},adjusting=false;
 /* ---------- photo shape override (Template / Full photo / Circle / Square) ---------- */
 const effCache=new Map();
 function effT(d){const B=BY[d.tpl]||LIB[0],f=d.frame||'auto';if(f==='auto'||(f==='full'&&B.full))return B;const key=B.id+'|'+f;if(effCache.has(key))return effCache.get(key);
-  if(f==='dance'){const T2={...B,L:{...LAYOUTS.dance,shape:'dance'},outfit:B.outfit||(B.o==='birthday'?(B.c==='Kids'?'hero':'party'):B.o==='anniversary'?'veshti':'kurta'),moves:B.moves,fx:B.fx.filter(([n])=>!PHOTO_FX.has(n)&&!ANCH.has(n)&&!PROPS.has(n)&&n!=='ribbon'&&n!=='filmstrip'&&n!=='curtains'&&n!=='doors'&&n!=='spotlight')};effCache.set(key,T2);return T2}
+  if(f==='dance'){const T2={...B,L:{...LAYOUTS.dance,shape:'dance'},outfit:B.outfit||(B.o==='birthday'?(B.c==='Kids'?'hero':'party'):B.o==='anniversary'?'veshti':'kurta'),moves:B.moves,fx:danceFx(B.fx)};effCache.set(key,T2);return T2}
   let L;if(f==='full')L={...LAYOUTS[B.lay==='base'?'fullBase':'full'],shape:'tall'};else{L={...LAYOUTS[B.lay]||LAYOUTS.classic,shape:f==='circle'?'circle':'rrect'};if(f==='square')L.h=L.r}
   const T={...B,L,ring:B.ring==='none'?'double':B.ring};effCache.set(key,T);return T}
+/* in dancing videos, decorations that normally sit around the photo move elsewhere */
+const BODY={cx:360,cy:690,r:250,h:300,shape:'circle'};
+const DANCE_MOVE={roseBalloon:{z:'top',dl:{cx:584,cy:300,r:58,shape:'circle'},fill:true},lightHeart:{z:'bg',dl:{cx:360,cy:700,r:250,shape:'circle'}},lightRing:{z:'bg',dl:BODY},starRing:{z:'bg',dl:{cx:360,cy:690,r:230,h:290,shape:'circle'}},garland:{z:'bg',dl:{cx:360,cy:690,r:262,shape:'circle'}},
+ kolamRings:{dl:BODY},mandala:{dl:BODY},halo:{dl:BODY},pookalam:{dl:{cx:360,cy:900,r:150,shape:'circle'}},chakra:{dl:BODY},cornerFlowers:{z:'bg',dl:{cx:360,cy:640,r:330,h:600,shape:'tall'}}};
+const DANCE_DROP=new Set(['glass','goldFrame','royalCrest','spotlight','cake','pongalPot','golu','modak','flute','footprints','rakhi','hillLamp','boat','candleLetters']);
+function danceFx(list){const out=[];list.forEach(([n,o])=>{if(DANCE_DROP.has(n))return;if(DANCE_MOVE[n]){out.push([n,{...o,...DANCE_MOVE[n]}]);return}out.push([n,o])});if(!out.some(([n])=>n==='danceSpot'))out.unshift(['danceSpot',{}]);return out}
 /* ---------- timing & long-wish layout ---------- */
 const mctx=document.createElement('canvas').getContext('2d');
 const layCache=new Map();
@@ -1060,7 +1071,7 @@ function drawBg(c,t,bg){
   c.fillRect(0,0,W,H);
   if(k==='b')a[1].forEach((col,i)=>{const x=W*(.5+.45*Math.sin(t*.25+i*2.1)),y=H*(.5+.42*Math.cos(t*.2+i*1.7));glow(c,x,y,440,col,.75)});
 }
-function runFx(c,t,d,T,z,u){for(const [name,o] of T.fx){const F=FX[name];if(!F||(o.z||F.z)!==z)continue;
+function runFx(c,t,d,T0,z,u){for(const [name,o] of T0.fx){const F=FX[name];if(!F||(o.z||F.z)!==z)continue;const T=o.dl?{...T0,L:{...T0.L,...o.dl}}:T0;
   if(u>0){if(name==='glass')continue;if(PROPS.has(name)){if(u>=1)continue;c.save();c.globalAlpha=1-u;F.f(c,t,o,T,d);c.restore();continue}if(ANCH.has(name)||z==='frame'){c.save();photoXform(c,T,u);F.f(c,t,o,T,d);c.restore();continue}}
   F.f(c,t,o,T,d)}}
 /* changing backgrounds: three related scenes cross-fade behind the same photo and text */
