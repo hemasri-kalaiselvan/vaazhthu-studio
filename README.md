@@ -10,7 +10,7 @@
 
 Vaazhthu Studio (வாழ்த்து வீடியோ) makes 15-second Tamil wish videos for birthdays, wedding anniversaries and Indian festivals, right in your phone's browser.
 
-Enter a name, add a photo, type a wish in Tamil, English or both, and pick one of **124 animated templates**. The app records a WhatsApp-status-size video (720×1280, 9:16) with music, ready to download or share.
+Enter a name, add a photo, type a wish in Tamil, English or both, and pick one of **133 animated templates**. The app records a WhatsApp-status-size video (720×1280, 9:16) with music, ready to download or share.
 
 There is no server, no sign-up and no paid service. The whole app is one `index.html` file.
 
@@ -18,7 +18,7 @@ There is no server, no sign-up and no paid service. The whole app is one `index.
 
 ## Features
 
-- **124 templates** across eight groups, in nine different looks:
+- **133 templates** in ten different looks:
 
   | Group | Count | Examples |
   |---|---|---|
@@ -30,6 +30,7 @@ There is no server, no sign-up and no paid service. The whole app is one `index.
   | Festivals | 34 | Pongal Paanai, Deepavali Crackers, Golu Steps, Crescent Moon, Pookalam |
   | Full photo (head to toe) | 14 | Royal Portrait, Temple Arch Portrait, Wedding Arch Portrait, Neon Portrait, Deepavali Family Portrait |
   | Party specials | 10 | Candle Letter Cake, Rose Balloon Sky, Golden Light Heart, Royal Crest, Marquee Night, Heart Rain |
+  | Dancing cartoon | 9 | Disco Party Dance, Kuthu Dance Birthday, Veshti Celebration, Pavadai Princess, Super Hero Kid, Saree Celebration |
 
 - **18 occasions**, each with its own Tamil and English title and ready-made wishes: Birthday, Wedding anniversary, Pongal, Deepavali, Karthigai Deepam, Tamil New Year, New Year, Vinayagar Chathurthi, Navaratri, Ayudha Pooja, Krishna Jayanthi, Christmas, Ramzan / Eid, Onam, Holi, Raksha Bandhan, Independence Day and Republic Day.
 - **Animated effects:**
@@ -49,6 +50,7 @@ There is no server, no sign-up and no paid service. The whole app is one `index.
 - **Photo shape for any template:** Template, Full photo (head to toe), Circle or Square. **Fit whole photo** zooms out so nothing is cut off, filling the sides with a soft blur.
 - **Rich effects:** a gold sparkle burst when the photo appears, a glossy shine across the frame, ornate gold frames, corner flowers and moving light flares.
 - **Nine looks** so templates don't look alike: Classic, Full-screen photo, Ribbon banner, Big name poster, Temple doors (opening wooden doors), Stage curtains, Film strip, Neon sign and Full photo. Filter by look with the **Look** menu.
+- **Dancing cartoon:** the face from your photo goes on an original cartoon body that dances (kuthu, bhangra, disco, twist, jump, wave and superhero moves) in outfits such as veshti, kurta, pavadai, saree, party wear, a disco suit and a superhero suit. Choose a hands-and-neck colour, and pick **Dancing cartoon** under Photo shape to use it with any template.
 - **Changing backgrounds:** an option that cross-fades three matching scenes behind the same photo and text.
 - **Caption-style wishes:** an option that shows the wish two lines at a time in bold, colourful outlined text, like song lyrics.
 - **Party effects:** a glowing heart of light, a light ring with sparkles, a ring of stars, rainbow candle letters, a hot-air balloon made of roses with a scroll banner, a royal crown-and-wings crest, a light-bulb marquee sign, neon light streaks and big petals falling in the foreground.
@@ -67,7 +69,7 @@ There is no server, no sign-up and no paid service. The whole app is one `index.
   | Modern | Modern pop beat, Party EDM |
   | Festival songs | Jingle Bells, Auld Lang Syne |
 
-  You can also use your own audio file, with an optional start and end time (for example 0:45 to 1:05), or no music. If the chosen part is shorter than the video, it repeats. Each template picks a fitting tune by default, such as parai for Pongal, sitar for Deepavali and Jingle Bells for Christmas.
+  You can also use your own audio file, with an optional start and end time in separate minute and second boxes (for example 0 min 45 sec to 1 min 5 sec), or no music. If the chosen part is shorter than the video, it repeats. Each template picks a fitting tune by default, such as parai for Pongal, sitar for Deepavali and Jingle Bells for Christmas.
 - **Search and filter:** category chips plus a search box, so typing "pongal", "neon" or "balloons" finds matching templates.
 - **Remembers your inputs** in the browser, so the name, wish and chosen template are still there next time.
 
